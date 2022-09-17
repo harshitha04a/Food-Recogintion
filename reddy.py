@@ -30,7 +30,12 @@ def set_bg_hack_url():
      )
 
 
+html_temp = """
 
+    <h1 style ="color:#1c4e05;text-align:center;">AM I fit?? </h1>
+    </div>
+    """
+st.markdown(html_temp,unsafe_allow_html=True)
 col1,col2=st.columns(2)
 set_bg_hack_url()
 
