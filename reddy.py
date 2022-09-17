@@ -16,17 +16,10 @@ def set_bg_hack_url():
     '''
         
 htt="""
-<div class="waveWrapper waveAnimation">
-  <div class="waveWrapperInner bgTop">
-    <div class="wave waveTop" style="background-image: url('11.png')"></div>
-  </div>
-  <div class="waveWrapperInner bgMiddle">
-    <div class="wave waveMiddle" style="background-image: url('12.png')"></div>
-  </div>
-  <div class="waveWrapperInner bgBottom">
-    <div class="wave waveBottom" style="background-image: url('13.png')"></div>
-  </div>
-</div>
+<style>
+{
+background-color:red;
+}
 """
 st.markdown(htt,unsafe_allow_html=True)
 
