@@ -18,13 +18,13 @@ def set_bg_hack_url():
 htt="""
 <div class="waveWrapper waveAnimation">
   <div class="waveWrapperInner bgTop">
-    <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+    <div class="wave waveTop" style="background-image: url('11.png')"></div>
   </div>
   <div class="waveWrapperInner bgMiddle">
-    <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+    <div class="wave waveMiddle" style="background-image: url('12.png')"></div>
   </div>
   <div class="waveWrapperInner bgBottom">
-    <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+    <div class="wave waveBottom" style="background-image: url('13.png')"></div>
   </div>
 </div>
 """
