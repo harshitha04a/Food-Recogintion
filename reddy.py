@@ -7,7 +7,6 @@ Created on Fri Sep 16 23:59:56 2022
 
 import streamlit as st
 import pandas as pd
-from emoji import emojize
 def set_bg_hack_url():
     '''
     A function to unpack an image from url and set as bg.
@@ -17,7 +16,7 @@ def set_bg_hack_url():
     '''
         
     st.markdown(
-         f"""
+         """
          <style>
          .stApp {{
              background: url("https://thumbs.dreamstime.com/b/healthy-clean-eating-layout-vegetarian-food-diet-nutrition-concept-various-fresh-vegetables-ingredients-salad-white-105567339.jpg");
@@ -90,22 +89,31 @@ if st.sidebar.button("predict"):
     s2=s-s1
    # st.success(s-s1)
     if s2>300 and s2<=500 :
-        xy="""
-        alert("tiktik you're absolutely fit");
-       """
-        st.markdown(xy,unsafe_allow_html=True)
-        st.markdown('Streamlit is **_really_ cool**.')
+        html_temp3="""
+        <h4 style="color:#FF9933">tiktik you are absolutely fit.</h4>
+        """
+        
+        st.sidebar.markdown(html_temp3,unsafe_allow_html=True)
+
     elif s2>500:
-        xy="""
-        alert("oh no!Seems that you're missing your diet");
-       """
-        st.markdown(xy)
-        st.markdown('Streamlit is **_really_ cool**.')
+        html_temp5="""
+        <h4 style="color:#FF9933">oh no!Seems that you are missing your diet</h4>
+        """
+        
+        st.sidebar.markdown(html_temp5,unsafe_allow_html=True)
+
+       
+       
        #st.warning("No worries .. Keep on exercising ")
     elif s2<300:
-        xy="""
-        alert("Inky pinky ponky..");
-       """
-        st.markdown(xy,unsafe_allow_html=True)
-        st.markdown('Streamlit is **_really_ cool**.')
+        html_temp6="""
+        <h4 style="color:#FF9933">Inky pinky ponky.
+        Seems you are underweight!!</h4>
+        """
+        
+        st.sidebar.markdown(html_temp6,unsafe_allow_html=True)
+
+       
+      
+    
        
