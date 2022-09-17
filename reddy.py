@@ -7,9 +7,15 @@ Created on Fri Sep 16 23:59:56 2022
 
 import streamlit as st
 import pandas as pd
-
+def set_bg_hack_url():
+    '''
+    A function to unpack an image from url and set as bg.
+    Returns
+    -------
+    The background.
+    '''
         
-st.markdown(
+    st.markdown(
          """
          <style>
          .stApp {{
