@@ -19,7 +19,7 @@ def set_bg_hack_url():
          """
          <style>
          .stApp {{
-             background: url("food.jpg");
+             background-image: url("food.jpg");
              background-size: cover
          }}
          </style>
