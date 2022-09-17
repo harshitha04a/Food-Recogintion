@@ -19,7 +19,7 @@ def set_bg_hack_url():
          """
          <style>
          .stApp {{
-             background-image: url("food.jpg");
+             background: url("https://thumbs.dreamstime.com/b/healthy-clean-eating-layout-vegetarian-food-diet-nutrition-concept-various-fresh-vegetables-ingredients-salad-white-105567339.jpg");
              background-size: cover
          }}
          </style>
@@ -41,7 +41,7 @@ with col1:
     <h4 style="color:#E05194">What did I eat today?</h4>
     """
     st.markdown(html_temp1,unsafe_allow_html=True)
-    h=pd.read_csv("calories.csv")
+    h=pd.read_csv("C://Users//harsh//Downloads//calories.csv")
     f=pd.DataFrame(h)
     t=f["Item"].values.tolist()
     c=f["Calorie per 100gm"].values.tolist()
@@ -62,7 +62,7 @@ with col1:
             j=j+1
     s=s/100
 with col2:
-    b=pd.read_csv("exercises.csv")
+    b=pd.read_csv("C:/Users/harsh/Downloads/exercises.csv")
     y=pd.DataFrame(b)
     html_temp2="""
     <h4 style="color:#FF9933">Exercises performed:</h4>
@@ -86,32 +86,9 @@ with col2:
             u=u+1  
     s1=s1/60       
 if st.sidebar.button("predict"):
-    s2=s-s1
+    st.sidebar.markdown("Your Calorie count is{}".format(s-s1))
    # st.success(s-s1)
-    if s2>300 and s2<=500 :
-        html_temp3="""
-        <h4 style="color:#FF9933">tiktik you are absolutely fit.</h4>
-        """
-        
-        st.sidebar.markdown(html_temp3,unsafe_allow_html=True)
-
-    elif s2>500:
-        html_temp5="""
-        <h4 style="color:#FF9933">oh no!Seems that you are missing your diet</h4>
-        """
-        
-        st.sidebar.markdown(html_temp5,unsafe_allow_html=True)
-
-       
-       
-       #st.warning("No worries .. Keep on exercising ")
-    elif s2<300:
-        html_temp6="""
-        <h4 style="color:#FF9933">Inky pinky ponky.
-        Seems you are underweight!!</h4>
-        """
-        
-        st.sidebar.markdown(html_temp6,unsafe_allow_html=True)
+    
 
        
       
