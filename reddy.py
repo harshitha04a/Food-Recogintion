@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Sep 16 23:59:56 2022
+Created on Sat Sep 17 19:21:25 2022
 
 @author: harsh
 """
 
 import streamlit as st
 import pandas as pd
+
+        
 def set_bg_hack_url():
     '''
     A function to unpack an image from url and set as bg.
@@ -15,29 +17,34 @@ def set_bg_hack_url():
     The background.
     '''
         
-htt="""
-<style>
-{
-background-color:red;
-}
-"""
-st.markdown(htt,unsafe_allow_html=True)
+    st.markdown(
+         """
+         <style>
+         .stApp {
+             background: url("https://thumbs.dreamstime.com/b/healthy-clean-eating-layout-vegetarian-food-diet-nutrition-concept-various-fresh-vegetables-ingredients-salad-white-105567339.jpg");
+             background-size: cover
+         }
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
 
-html_temp = """
 
-    <h1 style ="color:#299438;text-align:center;">🍽️AM I fit🍽️?? </h1>
-    </div>
-    """
-st.markdown(html_temp,unsafe_allow_html=True)
+
 col1,col2=st.columns(2)
 set_bg_hack_url()
 
 with col1:
+    fer="""
+    <h3 style="color:red">what is your gender?</h3>
+    """
+    w=st.markdown(fer,unsafe_allow_html=True)
+    k=st.radio("",("male","female"))
     ht22="""
     <h4 style="color:#7ECC49">What did I eat today?</h4>
     """
     st.markdown(ht22,unsafe_allow_html=True)
-    h=pd.read_csv("calories.csv")
+    h=pd.read_csv("C://Users//harsh//Downloads//calories.csv")
     f=pd.DataFrame(h)
     t=f["Item"].values.tolist()
     c=f["Calorie per 100gm"].values.tolist()
@@ -61,7 +68,12 @@ with col1:
             j=j+1
     s=s/100
 with col2:
-    b=pd.read_csv("exercises.csv")
+    fer1="""
+    <h3 style="color:red">what is your age?</h3>
+    """
+    w1=st.markdown(fer1,unsafe_allow_html=True)
+    age=st.number_input("")
+    b=pd.read_csv("C://Users//harsh//Downloads//exercises.csv")
     y=pd.DataFrame(b)
     ht2="""
     <h4 style="color:#7ECC49">Exercises performed:</h4>
@@ -90,11 +102,66 @@ with col2:
             u=u+1  
     s1=s1/60       
 if st.sidebar.button("predict"):
-    st.sidebar.markdown("Your Calorie count is{}".format(s-s1))
-   # st.success(s-s1)
-    
-
-       
-      
-    
-       
+    st.sidebar.markdown("Your Calorie count is {}".format(s-s1))
+    cal=s-s1
+   
+    if k=="male":
+       if age<=13:
+           
+           if cal<1600:
+                st.sidebar.success("You are not much active in diet it seems")
+           elif cal>1600 and cal<2200:
+                st.sidebar.success("You are on a perfect diet")
+           else:
+                st.sidebar.success("You have a chance of becoming obese")
+       elif age>13 and age<=30:
+           if cal<2800:
+                st.sidebar.success("You are not much active in diet it seems")
+           elif cal>2800 and cal<3200:
+                st.sidebar.success("You are on a perfect diet")
+           else:
+              st.sidebar.success("You have a chance of becoming obese")
+       elif age>31 and age<=50:
+            if cal<2600:
+                st.sidebar.success("You are not much active in diet it seems")
+            elif cal>2600 and cal<3000:
+                st.sidebar.success("You are on a perfect diet")
+            else:
+                st.sidebar.success("You have a chance of becoming obese")
+       else:
+            if cal<2400:
+                st.sidebar.success("You are not much active in diet it seems")
+            elif cal>2400 and cal<2800:
+                st.sidebar.success("You are on a perfect diet")
+            else:
+                st.sidebar.success("You have a chance of becoming obese")
+    elif k=="female":
+        if age<=13:
+            
+           if cal<1600:
+              st.sidebar.success("You are not much active in diet it seems")
+           elif cal>1600 and cal<2200:
+              st.sidebar.success("You are on a perfect diet")
+           else:
+              st.sidebar.success("You have a chance of becoming obese")
+        elif age>13 and age<=30:
+           if cal<2400:
+                st.sidebar.success("You are not much active in diet it seems")
+           elif cal>2400 and cal<4000:
+                st.sidebar.success("You are on a perfect diet")
+           else:
+              st.sidebar.success("You have a chance of becoming obese")
+        elif age>31 and age<=50:
+           if cal<2200:
+             st.sidebar.success("You are not much active in diet it seems")
+           elif cal>2200 and cal<2800:
+              st.sidebar.success("You are on a perfect diet")
+           else:
+               st.sidebar.success("You have a chance of becoming obese")
+        else:
+           if cal<2000:
+             st.sidebar.success("You are not much active in diet it seems")
+           elif cal>2000 and cal<2200:
+              st.sidebar.success("You are on a perfect diet")
+           else:
+              st.sidebar.success("You have a chance of becoming obese")
