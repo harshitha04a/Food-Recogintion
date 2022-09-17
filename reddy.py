@@ -44,7 +44,7 @@ with col1:
     <h4 style="color:#7ECC49">What did I eat today?</h4>
     """
     st.markdown(ht22,unsafe_allow_html=True)
-    h=pd.read_csv("C://Users//harsh//Downloads//calories.csv")
+    h=pd.read_csv("calories.csv")
     f=pd.DataFrame(h)
     t=f["Item"].values.tolist()
     c=f["Calorie per 100gm"].values.tolist()
