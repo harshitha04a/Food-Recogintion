@@ -40,10 +40,10 @@ col1,col2=st.columns(2)
 set_bg_hack_url()
 
 with col1:
-    html_temp1="""
+    ht22="""
     <h4 style="color:7ECC49">What did I eat today?</h4>
     """
-    st.markdown(html_temp1,unsafe_allow_html=True)
+    st.markdown(ht22,unsafe_allow_html=True)
     h=pd.read_csv("calories.csv")
     f=pd.DataFrame(h)
     t=f["Item"].values.tolist()
@@ -52,7 +52,7 @@ with col1:
     z=[]
     checked_stocks=[]
     ht="""
-    <h4 style="color:#96C3EB">Quantity intake:</h4>
+    <h4>Quantity intake:</h4>
     """
     st.sidebar.markdown(ht,unsafe_allow_html=True)
     check_boxes=[st.checkbox(stock,key=stock) for stock in t]
@@ -83,7 +83,7 @@ with col2:
     u=0
     s1=0
     ht3="""
-    <h4 style="color:#96C3EB">Workout time:</h4>
+    <h4>Workout time:</h4>
     """
     
     
