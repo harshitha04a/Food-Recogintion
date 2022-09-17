@@ -15,7 +15,20 @@ def set_bg_hack_url():
     The background.
     '''
         
-    
+htt="""
+<div class="waveWrapper waveAnimation">
+  <div class="waveWrapperInner bgTop">
+    <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+  </div>
+  <div class="waveWrapperInner bgMiddle">
+    <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+  </div>
+  <div class="waveWrapperInner bgBottom">
+    <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+  </div>
+</div>
+"""
+st.markdown(htt,unsafe_allow_html=True)
 
 html_temp = """
 
@@ -84,7 +97,7 @@ with col2:
             u=u+1  
     s1=s1/60       
 if st.sidebar.button("predict"):
-    st.sidebar.markdown("Your Calorie count is{}".format(💁‍♀️(s-s1)))
+    st.sidebar.markdown("Your Calorie count is{}".format(s-s1))
    # st.success(s-s1)
     
 
