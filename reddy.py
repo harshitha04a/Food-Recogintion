@@ -41,7 +41,7 @@ set_bg_hack_url()
 
 with col1:
     ht22="""
-    <h4 style="color:7ECC49">What did I eat today?</h4>
+    <h4 style="color:#7ECC49">What did I eat today?</h4>
     """
     st.markdown(ht22,unsafe_allow_html=True)
     h=pd.read_csv("calories.csv")
