@@ -73,7 +73,7 @@ with col2:
     """
     w1=st.markdown(fer1,unsafe_allow_html=True)
     age=st.number_input("")
-    b=pd.read_csv("C://Users//harsh//Downloads//exercises.csv")
+    b=pd.read_csv("exercises.csv")
     y=pd.DataFrame(b)
     ht2="""
     <h4 style="color:#7ECC49">Exercises performed:</h4>
