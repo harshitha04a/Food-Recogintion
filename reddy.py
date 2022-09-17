@@ -19,7 +19,7 @@ def set_bg_hack_url():
          """
          <style>
          .stApp {{
-             background: url("https://thumbs.dreamstime.com/b/healthy-clean-eating-layout-vegetarian-food-diet-nutrition-concept-various-fresh-vegetables-ingredients-salad-white-105567339.jpg");
+             background: url("food.jpg");
              background-size: cover
          }}
          </style>
