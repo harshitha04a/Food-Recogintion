@@ -107,59 +107,59 @@ if st.sidebar.button("predict"):
        if age<=13:
            
            if cal<1600:
-                st.sidebar.success("You are not much active in diet it seems")
+                st.sidebar.success("You are fit")
            elif cal>1600 and cal<2200:
-                st.sidebar.success("You are on a perfect diet")
+                st.sidebar.success("Focus on your diet")
            else:
                 st.sidebar.success("You have a chance of becoming obese")
        elif age>13 and age<=30:
            if cal<2800:
-                st.sidebar.success("You are not much active in diet it seems")
+                st.sidebar.success("You are fit")
            elif cal>2800 and cal<3200:
-                st.sidebar.success("You are on a perfect diet")
+                st.sidebar.success("Focus on your diet")
            else:
               st.sidebar.success("You have a chance of becoming obese")
        elif age>31 and age<=50:
             if cal<2600:
-                st.sidebar.success("You are not much active in diet it seems")
+                st.sidebar.success("You are fit")
             elif cal>2600 and cal<3000:
-                st.sidebar.success("You are on a perfect diet")
+                st.sidebar.success("Focus on your diet")
             else:
                 st.sidebar.success("You have a chance of becoming obese")
        else:
             if cal<2400:
-                st.sidebar.success("You are not much active in diet it seems")
+                st.sidebar.success("You are fit")
             elif cal>2400 and cal<2800:
-                st.sidebar.success("You are on a perfect diet")
+                st.sidebar.success("Focus on your diet")
             else:
                 st.sidebar.success("You have a chance of becoming obese")
     elif k=="female":
         if age<=13:
             
            if cal<1600:
-              st.sidebar.success("You are not much active in diet it seems")
+              st.sidebar.success("You are fit")
            elif cal>1600 and cal<2200:
-              st.sidebar.success("You are on a perfect diet")
+              st.sidebar.success("Focus on your diet")
            else:
               st.sidebar.success("You have a chance of becoming obese")
         elif age>13 and age<=30:
            if cal<2400:
-                st.sidebar.success("You are not much active in diet it seems")
+                st.sidebar.success("You are fit")
            elif cal>2400 and cal<4000:
-                st.sidebar.success("You are on a perfect diet")
+                st.sidebar.success("Focus on your diet")
            else:
               st.sidebar.success("You have a chance of becoming obese")
         elif age>31 and age<=50:
            if cal<2200:
-             st.sidebar.success("You are not much active in diet it seems")
+             st.sidebar.success("You are fit")
            elif cal>2200 and cal<2800:
-              st.sidebar.success("You are on a perfect diet")
+              st.sidebar.success("Focus on your diet")
            else:
                st.sidebar.success("You have a chance of becoming obese")
         else:
            if cal<2000:
              st.sidebar.success("You are not much active in diet it seems")
            elif cal>2000 and cal<2200:
-              st.sidebar.success("You are on a perfect diet")
+              st.sidebar.success("Focus on your diet")
            else:
               st.sidebar.success("You have a chance of becoming obese")
